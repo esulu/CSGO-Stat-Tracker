@@ -1,9 +1,30 @@
 const express = require('express');
 const router = express.Router();
+const fetch = require('node-fetch');
 
-router.get('/:id', (req, res) => { 
-    console.log(req.params.id);
-    res.send('request completed');
+router.get('/:platform/:id', async (req, res) => { 
+    try {
+        const headers = {
+            'TRN-Api-Key': process.env.TRACKER_API_KEY
+        }
+
+        const { platform, id } = req.params;
+
+        const response = await fetch(
+            `${process.env.TRACKER_API_URL}/profile/${platform}/${id}`, {
+            headers
+        });
+
+        const data = await response.json();
+
+        res.json(data);
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({
+            message: 'Internal Server Error'
+        });
+    }
 });
 
 module.exports = router;
