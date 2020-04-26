@@ -8,10 +8,10 @@ router.get('/:id', async (req, res) => {
             'TRN-Api-Key': process.env.TRACKER_API_KEY
         }
 
-        const { id } = req.params;
+        const { userId } = req.params;
 
         const response = await fetch(
-            `${process.env.TRACKER_API_URL}/profile/steam/${id}`, {
+            `${process.env.TRACKER_API_URL}/profile/steam/${userId}`, {
             headers
         });
 
