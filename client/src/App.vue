@@ -50,7 +50,7 @@ ul {
   background: var(--primary-color) url("./assets/bringingitall.jpg") no-repeat top center;
 }
 
-.containr {
+.container {
   max-width: 960px;
   margin: 1rem auto;
   overflow: auto;
