@@ -17,7 +17,7 @@ export default {
 
 <style>
 :root {
-  --primary-color: #953036;
+  --primary-color: #de9b35;
 }
 
 * {
@@ -47,7 +47,7 @@ ul {
 }
 
 .body-bg-image { 
-  background: var(--primary-color) url("./assets/bringingitall.jpg") no-repeat top center;
+  background: var(--primary-color) url("./assets/csgo-character.png") no-repeat top center;
 }
 
 .container {
