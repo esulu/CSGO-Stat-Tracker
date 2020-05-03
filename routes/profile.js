@@ -18,7 +18,6 @@ router.get('/:userId', async (req, res) => {
         if (steamData.response.success != 1) { // assume user entered ID instead of username 
             userId = username; 
         }
-        console.log(userId);
 
         // Get user data
         const headers = {
@@ -41,7 +40,6 @@ router.get('/:userId', async (req, res) => {
         res.json(data);
 
     } catch (err) {
-        console.error(err);
         res.status(500).json({
             message: 'Internal Server Error'
         });
