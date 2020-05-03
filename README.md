@@ -1,5 +1,5 @@
 # CSGO Stat Tracker
-A website that displays player stats for the Valve game Counter-Strike: Global Offensive. Entry requires a Steam ID or username. Stats vary from total time played, to wins and losses, and far more. 
+A website that displays player statistics for the Valve game Counter-Strike: Global Offensive. Entry requires a Steam ID or username. Player statistics vary from total time played, to wins and losses, and far more. 
 
 ## Try It Out
 Enter your Steam ID and view your stats on the [live heroku page](https://csgo-tracker-site.herokuapp.com/)
