@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 
 router.get('/:userId', async (req, res) => { 
     try {
-        /*
+
         // Get steam ID from username 
         const username = req.params.userId;
 
@@ -17,14 +17,12 @@ router.get('/:userId', async (req, res) => {
         
         if (steamData.response.success != 1) { // assume user entered ID instead of username 
             userId = username; 
-        }*/
+        }
 
         // Get user data
         const headers = {
             'TRN-Api-Key': process.env.TRACKER_API_KEY
         }
-
-        const { userId } = req.params;
 
         const response = await fetch(
             `${process.env.TRACKER_API_URL}/profile/steam/${userId}`, {
